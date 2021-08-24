@@ -3,30 +3,24 @@ pipeline {
 
     stages {
         stage ('Compile Stage') {
-
             steps {
-                withMaven(maven : 'maven_3_8_2') {
-                    sh 'mvn clean compile'
-                }
+                    echo 'Compile completed'
+                
             }
         }
 
         stage ('Testing Stage') {
 
             steps {
-                withMaven(maven : 'maven_3_8_2') {
-                    sh 'mvn test'
-                }
+                echo 'testing completed'
             }
         }
 
 
         stage ('Deployment Stage') {
             steps {
-                withMaven(maven : 'maven_3_8_2') {
-                    sh 'mvn deploy'
-                }
+                echo 'Deployment completed'
             }
-        }
-    }
+	}
+}
 }
