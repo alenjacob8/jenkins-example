@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('Compile Stage') {
             steps {
-                    echo 'Compile completed'
+                    echo 'Compile from Sample branch completed'
                 
             }
         }
@@ -12,14 +12,14 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                echo 'testing completed'
+                echo 'Testing from Sample branch completed'
             }
         }
 
 
         stage ('Deployment Stage') {
             steps {
-                echo 'Deployment completed'
+                echo 'Deployment from Sample branch completed'
             }
 	}
 }
